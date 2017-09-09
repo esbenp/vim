@@ -10,6 +10,9 @@ nmap <leader>w :w!<cr>
 " Show line numbers
 :set number 
 
+" Highlight search
+:set hlsearch
+
 " http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
 :set completeopt=longest,menuone
 :inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
@@ -53,3 +56,7 @@ au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
+
+" Buffers
+" https://stackoverflow.com/questions/16082991/vim-switching-between-files-rapidly-using-vanilla-vim-no-plugins
+nnoremap gb :ls<CR>:b<Space>
